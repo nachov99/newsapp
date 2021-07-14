@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Material App',
-        theme: miTema,
+        theme: ThemeData.dark().copyWith(accentColor: Colors.red),
         debugShowCheckedModeBanner: false,
         home: TabsPage()
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/src/pages/tab1_page.dart';
 import 'package:newsapp/src/pages/tab2_page.dart';
+import 'package:newsapp/src/theme/tema.dart';
 import 'package:provider/provider.dart';
 
 
@@ -25,11 +26,12 @@ class _Navegacion extends StatelessWidget {
     final navegacionModel = Provider.of<_NavegacionModel>(context);
 
     return BottomNavigationBar(
+      selectedItemColor: Colors.red,
       currentIndex: navegacionModel.paginaActual,
       onTap: (i) => navegacionModel.paginaActual = i,
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: 'Para ti' ),
-        BottomNavigationBarItem(icon: Icon(Icons.public), label: 'Encabezados' )
+        BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: 'For you'),
+        BottomNavigationBarItem(icon: Icon(Icons.public), label: 'Headlines' )
       ],
     );
   }

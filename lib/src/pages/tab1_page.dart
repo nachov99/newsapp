@@ -19,7 +19,7 @@ class _Tab1pageState extends State<Tab1page> with AutomaticKeepAliveClientMixin{
 
     return Scaffold(
       body: ( newsService.headlines.length == 0 )
-      ? Center(child: CircularProgressIndicator())
+      ? Center(child: CircularProgressIndicator(color: Colors.red,))
       : ListaNoticias(newsService.headlines)
    );
   }
